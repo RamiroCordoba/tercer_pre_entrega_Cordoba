@@ -15,6 +15,10 @@ def maceta(request):
     return render(request, "ninaApp/macetas.html")
 
 
-def cactus(request):
-    contexto = {"Cactus": Cactus.objects.all()}
-    return render(request, "ninaApp/cactus.html", contexto)
+def mate(request):
+    contexto = {"Mates": Mate.objects.all()}
+    return render(request, "ninaApp/mates.html", contexto)
+
+
+def quienesSomos(request):
+    return render(request, "ninaApp/quienesSomos.html")

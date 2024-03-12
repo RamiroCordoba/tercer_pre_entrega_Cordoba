@@ -28,7 +28,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#!">Las huellitas de Nina</a>
+        <a class="navbar-brand" href="{% url 'home'%}">Las huellitas de Nina</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,10 +49,12 @@
               <a class="nav-link" href="{% url 'macetas'%}">Macetas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'cactus'%}">Cactus</a>
+              <a class="nav-link" href="{% url 'mates'%}">Mates</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#!">Sobre nosotros</a>
+              <a class="nav-link" href="{%url 'quienes_somos'%}"
+                >Sobre nosotros</a
+              >
             </li>
           </ul>
           <form class="d-flex">

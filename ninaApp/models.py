@@ -9,21 +9,38 @@ class Cliente(models.Model):
     email = models.EmailField()
     telefono = models.CharField(max_length=15)
 
+    class Meta:
+        verbose_name = "Cliente"
+        verbose_name_plural = "Clientes"
+        ordering = ["nombre", "apellido"]
+
+    def __str__(self) -> str:
+        return f"{self.apellido}, {self.nombre}"
+
 
 class Maceta(models.Model):
     nombre = models.CharField(max_length=20)
     tamaño = models.IntegerField()
     descripcion = models.TextField(blank=True)
-    stock = models.BooleanField(default=False)
+    stock = models.IntegerField()
     precio = models.DecimalField(max_digits=6, decimal_places=2)
 
+    class Meta:
+        ordering = ["nombre"]
 
-class Cactus(models.Model):
-    nombre = models.CharField(max_length=50)
+    def __str__(self) -> str:
+        return f"{self.nombre}"
+
+
+class Mate(models.Model):
+    nombre = models.CharField(max_length=20)
+    tamaño = models.IntegerField()
     descripcion = models.TextField(blank=True)
+    stock = models.IntegerField()
+    precio = models.DecimalField(max_digits=6, decimal_places=2)
 
+    class Meta:
+        ordering = ["nombre"]
 
-class Planta(models.Model):
-    nombre = models.CharField(max_length=50)
-    descripcion = models.TextField(blank=True)
-    tieneFlor = models.BooleanField(default=False)
+    def __str__(self) -> str:
+        return f"{self.nombre}"
