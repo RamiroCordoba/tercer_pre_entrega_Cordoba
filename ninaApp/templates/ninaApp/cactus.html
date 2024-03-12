@@ -1,0 +1,36 @@
+{% extends 'ninaApp/index.html' %} {% block titulo %}
+<h1
+  class="display-4 fw-bolder"
+  style="
+    font-family: 'Goudy Medieval', serif;
+    color: #00ff00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    z-index: 2;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+  "
+>
+  Nuestros Cactus
+</h1>
+{% endblock titulo %} {% block contenido %}
+<table class="Table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre del cactus</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in Cactus %}
+    <tr>
+      <td>{{c.id}}</td>
+      <td>{{c.nombre}}</td>
+      <td>{{c.descripcion}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock contenido %}
