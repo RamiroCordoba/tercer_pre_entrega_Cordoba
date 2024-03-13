@@ -72,7 +72,7 @@
       class="bg-dark py-5 bg-image"
       style="
         background-image: url('{% static 'assets/fondo_header.jpg' %}');
-        height: 100vh;
+        height: 50vh;
         background-size: cover;
         background-position: center center;
         position: relative;
@@ -86,9 +86,9 @@
             class="display-4 fw-bolder"
             style="
               font-family: 'Goudy Medieval', serif;
-              color: #00ff00;
+              color: #904000;
               text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              font-size: 3rem;
+              font-size: 5rem;
               z-index: 2;
               -webkit-text-stroke: 1px black;
               text-stroke: 1px black;
@@ -96,17 +96,19 @@
           >
             Las Huellitas de Nina
           </h1>
-          <p
-            class="lead fw-normal text-black-50 mb-0"
+          <h3
+            class=""
             style="
               font-family: 'Goudy Medieval', serif;
-              color: #00ff00;
+              color: #904000;
               text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
               z-index: 2;
+              font-weight: bold;
+              -webkit-text-stroke: 1px black;
             "
           >
             "El lugar para poner tus cactus en modo Coquette"
-          </p>
+          </h3>
 
           {% endblock titulo %}
         </div>
@@ -115,310 +117,95 @@
 
     <!-- body-->
     {% block contenido %}
-    <section class="py-5">
-      <div class="container px-4 px-lg-5 mt-5">
-        <div
-          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-        >
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="{%static 'assets/prueba.png'%}"
-                alt=""
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Fancy Product</h5>
-                  <!-- Product price-->
-                  $40.00 - $80.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >View options</a
-                  >
-                </div>
-              </div>
-            </div>
+    <div class="container">
+      <hr class="my-5" />
+      <!-- Aca tengo 2 columnas-->
+      <div class="card border-0">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img
+              src="{% static 'assets/foto_gato.png' %}"
+              class="img-fluid rounded-start"
+              alt="Maceta"
+            />
           </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Sale badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Sale
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Special Item</h5>
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                  </div>
-                  <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$20.00</span
-                  >
-                  $18.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Sale badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Sale
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Sale Item</h5>
-                  <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$50.00</span
-                  >
-                  $25.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Popular Item</h5>
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                  </div>
-                  <!-- Product price-->
-                  $40.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Sale badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Sale
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Sale Item</h5>
-                  <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$50.00</span
-                  >
-                  $25.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Fancy Product</h5>
-                  <!-- Product price-->
-                  $120.00 - $280.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >View options</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Sale badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Sale
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Special Item</h5>
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                  </div>
-                  <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$20.00</span
-                  >
-                  $18.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-                alt="..."
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Popular Item</h5>
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                  </div>
-                  <!-- Product price-->
-                  $40.00
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
-                  >
-                </div>
-              </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">Macetas personalizadas</h5>
+              <p class="card-text">
+                Las macetas pintadas a mano, con la posibilidad de
+                personalizarlas con la imagen de tu querida mascota, son
+                verdaderamente mágicas. Cada trazo de pincel no solo resalta la
+                belleza de las plantas que albergan, sino que también encapsula
+                la esencia misma de la conexión especial que compartes con tu
+                compañero peludo. Imagina tener en tus manos una obra maestra
+                que no solo embellece tu espacio, sino que también te transporta
+                a momentos llenos de alegría y afecto. Cada detalle
+                cuidadosamente plasmado, desde la expresión juguetona hasta los
+                rasgos únicos, evoca una ola de emociones y recuerdos
+                entrañables. Estas macetas personalizadas no son simplemente
+                objetos decorativos, son portadores de historias, risas
+                compartidas y amor incondicional. Con cada vistazo, reviven la
+                chispa de la conexión especial que tienes con tu mascota,
+                convirtiendo tu jardín o espacio interior en un santuario lleno
+                de emociones vivas y vibrantes.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="container">
+      <hr class="my-5" />
+      <!-- Aca tengo 2 columnas-->
+      <div class="card border-0">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img
+              src="{% static 'assets/foto_llama.png' %}"
+              class="img-fluid rounded-start"
+              alt="Maceta"
+            />
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">Macetas con forma de animales</h5>
+              <p class="card-text">
+                Las macetas en forma de llama, adornadas con mandalas pintadas a
+                mano, son una expresión vibrante de creatividad y espiritualidad
+                que transforma cualquier rincón en un oasis de serenidad y
+                estilo. Cada llama cobra vida con colores vivos y mandalas
+                intrincados, fusionando la calidez del fuego simbólico con la
+                profundidad espiritual de los patrones geométricos. Estas
+                macetas no solo ofrecen un hogar único para tus plantas, sino
+                que también sirven como representación artística de la conexión
+                entre la naturaleza y la esencia interior. La combinación de la
+                forma juguetona de la llama y la precisión de los mandalas crea
+                una obra maestra visual que evoca una sensación de equilibrio y
+                armonía. Al observar estas macetas, te sumerges en un viaje
+                visual y espiritual, donde cada línea y color cuentan una
+                historia de paz interior y conexión con la naturaleza. A través
+                de la sinergia entre la forma de llama y los mandalas, estas
+                macetas se convierten en faros de energía positiva y estética
+                encantadora, elevando cualquier espacio a un nivel superior de
+                belleza y significado.
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Last updated 3 mins ago</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-5" />
     {% endblock contenido %}
     <!-- Footer-->
     <footer class="py-5 bg-dark">
