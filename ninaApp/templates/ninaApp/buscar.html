@@ -1,0 +1,25 @@
+{% extends 'ninaApp/index.html' %} {% block titulo %}
+<h1
+  class="display-4 fw-bolder"
+  style="
+    font-family: 'Goudy Medieval', serif;
+    color: #00ff00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    z-index: 2;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+  "
+>
+  Buscar maceta:
+</h1>
+{% endblock titulo %} {% block contenido %}
+
+<form action="{% url 'encontrar_macetas' %}" method="get">
+  {% csrf_token %}
+  <p>
+    Ingrese cadena a buscar: <input type="text" name="buscar" id="buscar" />
+  </p>
+  <input type="submit" value="Buscar" />
+</form>
+{% endblock contenido %}

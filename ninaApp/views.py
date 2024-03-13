@@ -98,3 +98,18 @@ def clienteForm(request):
     else:
         miForm = ClienteForm()
     return render(request, "ninaApp/clienteForm.html", {"form": miForm})
+
+
+# _____________ Buscar
+def buscarMacetas(request):
+    return render(request, "ninaApp/buscar.html")
+
+
+def encontrarMacetas(request):
+    if request.GET["buscar"]:
+        patron = request.GET["buscar"]
+        macetas = Maceta.objects.filter(nombre__icontains=patron)
+        contexto = {"Macetas": macetas}
+        return render(request, "ninaApp/macetas.html", contexto)
+    contexto = {"Maceta": Maceta.objects.all()}
+    return render(request, "ninaApp/macetas.html", contexto)
