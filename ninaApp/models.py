@@ -35,7 +35,7 @@ class Maceta(models.Model):
 class Mate(models.Model):
     nombre = models.CharField(max_length=20)
     tamaño = models.IntegerField()
-    descripcion = models.TextField(blank=True)
+    descripcion = models.CharField(max_length=2000, blank=True)
     stock = models.IntegerField()
     precio = models.DecimalField(max_digits=6, decimal_places=2)
 

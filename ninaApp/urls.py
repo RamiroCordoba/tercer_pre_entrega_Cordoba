@@ -11,4 +11,6 @@ urlpatterns = [
     path("quienesSomos/", quienesSomos, name="quienes_somos"),
     # ________ Formularios
     path("maceta_form/", macetaForm, name="maceta_form"),
+    path("mate_form/", mateForm, name="mate_form"),
+    path("cliente_form/", clienteForm, name="cliente_form"),
 ]

@@ -52,3 +52,49 @@ def macetaForm(request):
     else:
         miForm = MacetaForm()
     return render(request, "ninaApp/macetaForm.html", {"form": miForm})
+
+
+def mateForm(request):
+    if request.method == "POST":
+        miForm = MateForm(request.POST)
+        if miForm.is_valid():
+            mate_nombre = miForm.cleaned_data.get("nombre")
+            mate_tamaño = miForm.cleaned_data.get("tamaño")
+            mate_descripcion = miForm.cleaned_data.get("descripcion")
+            mate_stock = miForm.cleaned_data.get("stock")
+            mate_precio = miForm.cleaned_data.get("precio")
+            mateNuevo = Mate(
+                nombre=mate_nombre,
+                tamaño=mate_tamaño,
+                descripcion=mate_descripcion,
+                stock=mate_stock,
+                precio=mate_precio,
+            )
+            mateNuevo.save()
+            contexto = {"Mate": Mate.objects.all()}
+            return render(request, "ninaApp/mates.html", contexto)
+    else:
+        miForm = MateForm()
+    return render(request, "ninaApp/mateForm.html", {"form": miForm})
+
+
+def clienteForm(request):
+    if request.method == "POST":
+        miForm = ClienteForm(request.POST)
+        if miForm.is_valid():
+            cliente_nombre = miForm.cleaned_data.get("nombre")
+            cliente_apellido = miForm.cleaned_data.get("apellido")
+            cliente_email = miForm.cleaned_data.get("email")
+            cliente_telefono = miForm.cleaned_data.get("telefono")
+            clienteNuevo = Cliente(
+                nombre=cliente_nombre,
+                apellido=cliente_apellido,
+                email=cliente_email,
+                telefono=cliente_telefono,
+            )
+            clienteNuevo.save()
+            contexto = {"Clientes": Cliente.objects.all()}
+            return render(request, "ninaApp/clientes.html", contexto)
+    else:
+        miForm = ClienteForm()
+    return render(request, "ninaApp/clienteForm.html", {"form": miForm})

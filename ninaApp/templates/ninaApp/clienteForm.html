@@ -11,26 +11,15 @@
     text-stroke: 1px black;
   "
 >
-  Nuestros Mates
+  Agregar un cliente nuevo:
 </h1>
 {% endblock titulo %} {% block contenido %}
-<table class="Table table-striped">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Nombre del Mate</th>
-      <th>Descripción</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for m in Mate %}
-    <tr>
-      <td>{{m.id}}</td>
-      <td>{{m.nombre}}</td>
-      <td>{{m.descripcion}}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<form action="" method="post">
+  {% csrf_token %}
+  <table>
+    {{form.as_table}}
+  </table>
+  <input type="submit" value="Agregar cliente" />
+</form>
 
 {% endblock contenido %}
